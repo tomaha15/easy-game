@@ -32,6 +32,20 @@ let getComputerChoice = function(min, max) {
     else if(playerSelection == `Scissors`&& computerSelection == `Rock`) {return `You lose! Rock beats Scissors`;}
     else {return `Draw! Try again`}
   }
+
+
+  const script = prompt(`Chose Rock, Paper or Scissors...`);
+  let newScript = script.toLowerCase();
+  let getFirst = newScript.slice(0,1);
+  let getRest = newScript.slice(1,99);
+  let first = getFirst.toUpperCase();
+
+  let final = first + getRest;
+  console.log(final);
+
   
-  const playerSelection = `Rock`;
+  const playerSelection = final;
+  console.log(playerSelection);
   console.log(playRound(playerSelection, computerSelection));
+
+  alert(playRound(playerSelection, computerSelection));
